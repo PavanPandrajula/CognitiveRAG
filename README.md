@@ -40,6 +40,7 @@ flowchart TD
         N -.-> P
         P --> Q[Hallucination Evaluator & Metrics Dashboard]
     end
+```
 
 ---
 
