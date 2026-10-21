@@ -6,8 +6,6 @@ A production-ready Retrieval-Augmented Generation (RAG) system featuring documen
 
 ## Architecture Overview
 
-## Architecture Overview
-
 ```mermaid
 flowchart TD
     subgraph Ingestion ["1. Document Ingestion & Indexing"]
