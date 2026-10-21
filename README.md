@@ -6,6 +6,8 @@ A production-ready Retrieval-Augmented Generation (RAG) system featuring documen
 
 ## Architecture Overview
 
+## Architecture Overview
+
 ```mermaid
 flowchart TD
     subgraph Ingestion ["1. Document Ingestion & Indexing"]
@@ -31,7 +33,13 @@ flowchart TD
         M --> N[Google Gemini LLM]
         N --> O[Final Structured Answer]
     end
-```
+
+    subgraph Observability ["4. Observability & Evaluation"]
+        H -.-> P[LangSmith Tracing & Telemetry]
+        J -.-> P
+        N -.-> P
+        P --> Q[Hallucination Evaluator & Metrics Dashboard]
+    end
 
 ---
 
@@ -170,6 +178,3 @@ To push this repository to GitHub for the first time:
    git remote add origin https://github.com/<your-username>/<your-repo-name>.git
    git push -u origin main
    ```
-
-> [!IMPORTANT]
-> Your `.env` file contains secret API keys and is excluded via `.gitignore`. Never commit `.env` to GitHub. Always use `.env.example` to document required environment variables.
